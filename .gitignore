@@ -1,0 +1,7 @@
+.metadata/
+.recommenders/
+.*
+global-groovy.log
+target/
+saopui.log
+soapui-errors.log
