@@ -3,5 +3,5 @@
 .*
 global-groovy.log
 target/
-saopui.log
+soapui.log
 soapui-errors.log
