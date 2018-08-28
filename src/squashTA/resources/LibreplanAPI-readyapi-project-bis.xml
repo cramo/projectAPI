@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="5ab29d1d-f428-42d9-be35-a1c29f2bbcdf" created="2.4.0" activeEnvironment="Default environment" name="LibreplanAPI" resourceRoot="${projectDir}" updated="2.4.0 2018-06-08T12:50:23Z" encryptionMode="Not encrypted" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="9911906f-0f13-4b62-a881-0882bafa4b12" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8180" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://localhost:8180</con:endpoint></con:endpoints><con:resource name="Project - Export all" path="/libreplan/ws/rest/orderelements/" id="5e552eed-b0c4-42b7-9f57-aeff64481885"><con:settings/><con:parameters><con:parameter><con:name>_wadl</con:name><con:style>QUERY</con:style></con:parameter><con:parameter required="true"><con:name>_type</con:name><con:value>xml</con:value><con:style>QUERY</con:style><con:default>xml</con:default></con:parameter></con:parameters><con:method name="Liste des projets" id="9d384a55-a99e-4355-926a-c976a6e6b335" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:order-list</con:element></con:representation><con:request name="Export all" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:credentials><con:username>wsreader</con:username><con:password>wsreader</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource><con:resource name="Project - Export one" path="/libreplan/ws/rest/orderelements/{code}/" id="7012635b-e72c-4aa5-8be0-27de2dd35fa8"><con:settings/><con:parameters><con:parameter><con:name>_wadl</con:name><con:style>QUERY</con:style></con:parameter><con:parameter required="true"><con:name>_type</con:name><con:value>xml</con:value><con:style>QUERY</con:style><con:default>xml</con:default></con:parameter><con:parameter required="false"><con:name>code</con:name><con:value>test_valeur</con:value><con:style>TEMPLATE</con:style><con:default>test_valeur</con:default><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Export one" id="9d384a55-a99e-4355-926a-c976a6e6b335" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:order</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html;charset=utf-8</con:mediaType><con:status>404</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/xml</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:request name="Export one" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:credentials><con:username>wsreader</con:username><con:password>wsreader</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><entry key="code" value="ORDER-2" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>_wadl</con:entry><con:entry>_type</con:entry><con:entry>code</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="Project - Import one or more" path="/libreplan/ws/rest/orderelements/" id="73fcbae6-1e6d-434d-9c90-0a71c882c8de"><con:settings/><con:parameters><con:parameter><con:name>_wadl</con:name><con:style>QUERY</con:style></con:parameter><con:parameter required="true"><con:name>_type</con:name><con:value>xml</con:value><con:style>QUERY</con:style><con:default>xml</con:default></con:parameter></con:parameters><con:method name="Import" id="9d384a55-a99e-4355-926a-c976a6e6b335" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:instance-constraint-violations-list</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>403</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/xml</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:internal-error</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/></con:representation><con:request name="Import one" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">true</con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<order-list xmlns="http://rest.ws.libreplan.org">
+  <order xmlns="http://rest.ws.libreplan.org"
+    code="ORDER-1" name="Order UPDATED" init-date="2019-01-01">
+    <children>
+      <order-line-group code="ORDER-1-OE-1" name="Order element 1">
+        <children>
+          <order-line code="ORDER-1-OE-1-1" name="Order element 1.1">
+            <hours-groups>
+              <hours-group code="HG-1" working-hours="1500" resource-type="WORKER" />
+            </hours-groups>
+          </order-line>
+          <order-line code="ORDER-1-OE-1-2" name="Order element 1.2">
+            <hours-groups>
+              <hours-group code="HG-2" working-hours="2500" resource-type="WORKER" />
+            </hours-groups>
+          </order-line>
+        </children>
+      </order-line-group>
+      <order-line code="ORDER-1-OE-2" name="Order element 2">
+        <hours-groups>
+          <hours-group code="HG-3" working-hours="1500" resource-type="WORKER" />
+        </hours-groups>
+      </order-line>
+    </children>
+  </order>
+  <order xmlns="http://rest.ws.libreplan.org"
+    code="ORDER-2" name="Order UPDATED 2" init-date="2019-01-01">
+  </order>
+</order-list>]]></con:request><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:credentials><con:username>wswriter</con:username><con:password>wswriter</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource><con:resource name="Project - Remove entity" path="/libreplan/ws/rest/orderelements/{code}/" id="4c550aa9-2069-4780-8a06-5cd8d095e606"><con:settings/><con:parameters><con:parameter><con:name>_wadl</con:name><con:style>QUERY</con:style></con:parameter><con:parameter required="true"><con:name>_type</con:name><con:value>xml</con:value><con:style>QUERY</con:style><con:default>xml</con:default></con:parameter><con:parameter required="true"><con:name>code</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Supprimer des projets" id="9d384a55-a99e-4355-926a-c976a6e6b335" method="DELETE"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:order-list</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>405</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>text/xml</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>text/xml</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:request name="Remove entity" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:credentials><con:username>wswriter</con:username><con:password>wswriter</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><entry key="code" value="ORDER-2" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>_wadl</con:entry><con:entry>_type</con:entry><con:entry>code</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="Calendar - Export one" path="/libreplan/ws/rest/calendars/{code}/" id="0478b852-0c67-467d-a2af-65b040f13b43"><con:settings/><con:parameters><con:parameter><con:name>_wadl</con:name><con:style>QUERY</con:style></con:parameter><con:parameter required="true"><con:name>_type</con:name><con:value>xml</con:value><con:style>QUERY</con:style><con:default>xml</con:default></con:parameter><con:parameter required="true"><con:name>code</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Récupérer un calendrier" id="9d384a55-a99e-4355-926a-c976a6e6b335" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:base-calendar</con:element></con:representation><con:request name="Export one" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:credentials><con:username>wsreader</con:username><con:password>wsreader</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><entry key="code" value="CALENDAR0001" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>_wadl</con:entry><con:entry>_type</con:entry><con:entry>code</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="Calendar - Export all" path="/libreplan/ws/rest/calendars/" id="36cdc6b7-99ca-475a-b7cf-67d23ad4cf26"><con:settings/><con:parameters><con:parameter><con:name>_wadl</con:name><con:style>QUERY</con:style></con:parameter><con:parameter required="true"><con:name>_type</con:name><con:value>xml</con:value><con:style>QUERY</con:style><con:default>xml</con:default></con:parameter></con:parameters><con:method name="Récupérer les calendriers" id="9d384a55-a99e-4355-926a-c976a6e6b335" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:base-calendar-list</con:element></con:representation><con:request name="Export all" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:credentials><con:username>wsreader</con:username><con:password>wsreader</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/><con:parameterOrder><con:entry>_wadl</con:entry><con:entry>_type</con:entry></con:parameterOrder></con:request><con:request name="Copy of Export all" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:credentials><con:username>wsreader</con:username><con:password>wsreader</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/><con:parameterOrder><con:entry>_wadl</con:entry><con:entry>_type</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="Ressources - Export all" path="/libreplan/ws/rest/resources/" id="59a5b768-4847-4510-a726-d4abbbc99fa6"><con:settings/><con:parameters><con:parameter><con:name>_wadl</con:name><con:style>QUERY</con:style></con:parameter><con:parameter required="true"><con:name>_type</con:name><con:value>xml</con:value><con:style>QUERY</con:style><con:default>xml</con:default></con:parameter></con:parameters><con:method name="Liste des ressources" id="9d384a55-a99e-4355-926a-c976a6e6b335" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:resource-list</con:element></con:representation><con:request name="Export all" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:credentials><con:username>wsreader</con:username><con:password>wsreader</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource><con:resource name="Resources - Export one" path="/libreplan/ws/rest/resources/{code}/" id="1e0b2c0b-2462-44d2-89e7-0fe2a96ff68a"><con:settings/><con:parameters><con:parameter><con:name>_wadl</con:name><con:style>QUERY</con:style></con:parameter><con:parameter required="true"><con:name>_type</con:name><con:value>xml</con:value><con:style>QUERY</con:style><con:default>xml</con:default></con:parameter><con:parameter required="true"><con:name>code</con:name><con:value/><con:style>TEMPLATE</con:style><con:default/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Récupérer une ressource" id="9d384a55-a99e-4355-926a-c976a6e6b335" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:order-list</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/xml</con:mediaType><con:status>404</con:status><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/xml</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:internal-error</con:element></con:representation><con:request name="Export one" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:credentials><con:username>wsreader</con:username><con:password>wsreader</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><entry key="code" value="w15" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>_wadl</con:entry><con:entry>_type</con:entry><con:entry>code</con:entry></con:parameterOrder></con:request></con:method></con:resource><con:resource name="Resources - Import one or more" path="/libreplan/ws/rest/resources/" id="9f154741-d144-4435-81a7-bf3a43d6e60d"><con:settings/><con:parameters><con:parameter><con:name>_wadl</con:name><con:style>QUERY</con:style></con:parameter><con:parameter required="true"><con:name>_type</con:name><con:value>xml</con:value><con:style>QUERY</con:style><con:default>xml</con:default></con:parameter></con:parameters><con:method name="Import" id="9d384a55-a99e-4355-926a-c976a6e6b335" method="POST"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:instance-constraint-violations-list</con:element></con:representation><con:representation type="FAULT"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>403</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/xml</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:internal-error</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/></con:representation><con:request name="Import one" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">true</con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+    See org.libreplan.web.test.ws.resources.api.ResourceServiceTest for a
+    complete list of test cases.
+ -->
+
+<resource-list xmlns="http://rest.ws.libreplan.org">
+
+    <!--  *** Machines *** -->
+
+    <!-- OK -->
+    <machine code="m1" name="m1-name" description="m1-desc"/>
+
+    <!--  Criterion satisfaction of incorrect type. -->
+    <machine code="m2" name="m2-name" description="m2-desc">
+        <criterion-satisfaction-list>
+            <criterion-satisfaction
+                code="m2-s1"
+                criterion-type-name="WORK_RELATIONSHIP"
+                criterion-name="hiredResourceWorkingRelationship"
+                start-date="2019-01-01"
+                end-date=""/>
+        </criterion-satisfaction-list>
+    </machine>
+
+    <!-- [It assumes existence of "TestCostCategory"] OK. -->
+    <machine code="m3" name="m3-name" description="m3-desc">
+        <resources-cost-category-assignment-list>
+            <resources-cost-category-assignment
+                code="m3-a1"
+                cost-category-name="TestCostCategory"
+                start-date="2019-01-01"/>
+            <resources-cost-category-assignment
+                code="m3-a2"
+                cost-category-name="TestCostCategory"
+                start-date="2019-01-01"
+                end-date="2019-04-01"/>
+        </resources-cost-category-assignment-list>
+    </machine>
+
+    <!-- [It assumes existence of "TestCostCategory"] Repeated cost assignment
+         code (used by another machine). -->
+    <machine code="m4" name="m4-name" description="m4-desc">
+        <resources-cost-category-assignment-list>
+            <resources-cost-category-assignment
+                code="m3-a1"
+                cost-category-name="TestCostCategory"
+                start-date="2019-01-01"/>
+        </resources-cost-category-assignment-list>
+    </machine>
+
+    <!-- OK or not OK depending on the existence of "TestCalendar". -->
+    <machine code="m5" name="m5-name" description="m5-desc"
+        calendar-name="TestCalendar"/>
+
+    <!-- [It assumes existence of "TestCostCategory"] Missing start date and
+         code, and repeated code in cost assignments. -->
+    <machine code="m6" name="m6-name" description="m6-desc">
+        <resources-cost-category-assignment-list>
+            <resources-cost-category-assignment
+                code="m6-a1"
+                cost-category-name="TestCostCategory"
+                end-date="2019-01-01"/>
+            <resources-cost-category-assignment
+                cost-category-name="TestCostCategory"
+                start-date="2001-01-01"/>
+            <resources-cost-category-assignment
+                code="m6-a1"
+                cost-category-name="TestCostCategory"
+                start-date="2000-01-01" end-date="2000-02-01"/>
+        </resources-cost-category-assignment-list>
+    </machine>
+
+    <!-- [It assumes existence of "TestCostCategory"] Negative interval. -->
+    <machine code="m7" name="m7-name" description="m7-desc">
+        <resources-cost-category-assignment-list>
+            <resources-cost-category-assignment
+                code="m7-a1"
+                cost-category-name="TestCostCategory"
+                start-date="2000-02-01"
+                end-date="2000-01-01"/>
+        </resources-cost-category-assignment-list>
+    </machine>
+
+    <!-- [It assumes existence of "TestCostCategory"] Overlapping intervals. -->
+    <machine code="m8" name="m8-name" description="m8-desc">
+        <resources-cost-category-assignment-list>
+            <resources-cost-category-assignment
+                code="m8-a1"
+                cost-category-name="TestCostCategory"
+                start-date="2000-02-01"
+                end-date="2000-05-01"/>
+            <resources-cost-category-assignment
+                code="m8-a2"
+                cost-category-name="TestCostCategory"
+                start-date="2000-01-01"
+                end-date="2000-03-01"/>
+        </resources-cost-category-assignment-list>
+    </machine>
+
+    <!--  Missing code and name (description is optional). -->
+    <machine code="" description=""/>
+
+    <!--  *** Workers *** -->
+
+    <!-- OK -->
+    <worker code="w1" first-name="w1-firstName" surname="w1-surname" nif="w1-nif">
+        <criterion-satisfaction-list>
+            <criterion-satisfaction
+                code="w1-s1"
+                criterion-type-name="WORK_RELATIONSHIP"
+                criterion-name="hiredResourceWorkingRelationship"
+                start-date="2009-01-01"
+                end-date=""/>
+            <criterion-satisfaction
+                code="w1-s2"
+                criterion-type-name="LEAVE"
+                criterion-name="paternityLeave"
+                start-date="2009-12-24"
+                end-date="2009-12-25"/>
+        </criterion-satisfaction-list>
+    </worker>
+
+    <!--  Missing start date and code, and repeated code in criterion
+          satisfactions. -->
+    <worker code="w2" first-name="w2-firstName" surname="w2-surname" nif="w2-nif">
+        <criterion-satisfaction-list>
+            <criterion-satisfaction
+                code="w2-s1"
+                criterion-type-name="LEAVE"
+                criterion-name="paternityLeave"
+                end-date="2009-12-25"/>
+            <criterion-satisfaction
+                criterion-type-name="LEAVE"
+                criterion-name="paternityLeave"
+                start-date="2009-12-25"/>
+             <criterion-satisfaction
+                code="w2-s1"
+                criterion-type-name="LEAVE"
+                criterion-name="paternityLeave"
+                start-date="2000-01-01" end="2000-02-01"/>
+        </criterion-satisfaction-list>
+    </worker>
+
+    <!--  Non-existent criterion type. -->
+    <worker code="w3" first-name="w3-firstName" surname="w3-surname" nif="w3-nif">
+        <criterion-satisfaction-list>
+            <criterion-satisfaction
+                code="w3-s1"
+                criterion-type-name="WORK_RELATIONSHIP_XXX"
+                criterion-name="hiredResourceWorkingRelationship"
+                start-date="2009-01-01"
+                end-date=""/>
+        </criterion-satisfaction-list>
+    </worker>
+
+    <!--  Non-existent criterion. -->
+    <worker code="w4" first-name="w4-firstName" surname="w4-surname" nif="w4-nif">
+        <criterion-satisfaction-list>
+            <criterion-satisfaction
+                code="w4-s1"
+                criterion-type-name="WORK_RELATIONSHIP"
+                criterion-name="hiredResourceWorkingRelationshipXXX"
+                start-date="2009-01-01"
+                end-date=""/>
+        </criterion-satisfaction-list>
+    </worker>
+
+    <!-- Criterion not specified. -->
+    <worker code="w5" first-name="w5-firstName" surname="w5-surname" nif="w5-nif">
+        <criterion-satisfaction-list>
+            <criterion-satisfaction
+                code="w5-s1"
+                criterion-type-name="WORK_RELATIONSHIP"
+                start-date="2009-01-01"
+                end-date=""/>
+        </criterion-satisfaction-list>
+    </worker>
+
+    <!-- Criterion type not specified. -->
+    <worker code="w6" first-name="w6-firstName" surname="w6-surname" nif="w6-nif">
+        <criterion-satisfaction-list>
+            <criterion-satisfaction
+                code="w6-s1"
+                criterion-name="hiredResourceWorkingRelationship"
+                start-date="2009-01-01"
+                end-date=""/>
+        </criterion-satisfaction-list>
+    </worker>
+
+    <!--  Missing first name, surname, and nif. -->
+    <worker code="w7" first-name="" nif=""/>
+
+    <!-- OK or not OK depending on the existence of "TestCalendar". -->
+    <worker code="w8" first-name="w8-firstName" surname="w8-surname" nif="w8-nif"
+        calendar-name="TestCalendar" />
+
+    <!-- [It assumes existence of "TestCalendar" and "TestCostCategory"] OK -->
+    <worker code="w9" first-name="w9-firstName" surname="w9-surname" nif="w9-nif"
+        calendar-name="TestCalendar">
+        <criterion-satisfaction-list>
+            <criterion-satisfaction
+                code="w9-s1"
+                criterion-type-name="WORK_RELATIONSHIP"
+                criterion-name="hiredResourceWorkingRelationship"
+                start-date="2009-01-01"
+                end-date=""/>
+            <criterion-satisfaction
+                code="w9-s2"
+                criterion-type-name="LEAVE"
+                criterion-name="paternityLeave"
+                start-date="2009-12-24"
+                end-date="2009-12-25"/>
+        </criterion-satisfaction-list>
+        <resources-cost-category-assignment-list>
+            <resources-cost-category-assignment
+                code="w9-a1"
+                cost-category-name="TestCostCategory"
+                start-date="2001-01-01"/>
+            <resources-cost-category-assignment
+                code="w9-a2"
+                cost-category-name="TestCostCategory"
+                start-date="2000-01-01"
+                end-date="2000-04-01"/>
+        </resources-cost-category-assignment-list>
+    </worker>
+
+    <!--  Negative interval. -->
+    <worker code="w10" first-name="w10-firstName" surname="w10-surname" nif="w10-nif">
+        <criterion-satisfaction-list>
+            <criterion-satisfaction
+                code="w10-s1"
+                criterion-type-name="LEAVE"
+                criterion-name="paternityLeave"
+                start-date="2000-02-01"
+                end-date="2000-01-01"/>
+        </criterion-satisfaction-list>
+    </worker>
+
+    <!-- Criterion satisfaction overlapping in "LEAVE :: paternityLeave". -->
+    <worker code="w11" first-name="w11-firstName" surname="w11-surname" nif="w11-nif">
+        <criterion-satisfaction-list>
+            <criterion-satisfaction
+                code="w11-s1"
+                criterion-type-name="LEAVE"
+                criterion-name="paternityLeave"
+                start-date="2000-01-01"
+                end-date="2000-02-01"/>
+            <criterion-satisfaction
+                code="w11-s2"
+                criterion-type-name="LEAVE"
+                criterion-name="paternityLeave"
+                start-date="2000-01-15"
+                end-date="2000-02-01"/>
+        </criterion-satisfaction-list>
+    </worker>
+
+    <!-- Criterion satisfaction overlapping (LEAVE does not allow
+         simultaneous criterion satisfactions in intervals that overlap). -->
+    <worker code="w12" first-name="w12-firstName" surname="w12-surname" nif="w12-nif">
+        <criterion-satisfaction-list>
+            <criterion-satisfaction
+                code="w12-s1"
+                criterion-type-name="LEAVE"
+                criterion-name="paternityLeave"
+                start-date="2000-01-01"
+                end-date="2000-02-01"/>
+            <criterion-satisfaction
+                code="w12-s2"
+                criterion-type-name="LEAVE"
+                criterion-name="medicalLeave"
+                start-date="2000-01-15"
+                end-date="2000-02-01"/>
+        </criterion-satisfaction-list>
+    </worker>
+
+    <!-- [It assumes existence of "TestLocationGroupCriterion" and
+         "TestLocationGroupCriterion2"] OK
+         (LOCATION_GROUP allows simultaneous criterion satisfactions in
+         intervals that overlap). -->
+    <worker code="w13" first-name="w13-firstName" surname="w13-surname" nif="w13-nif">
+        <criterion-satisfaction-list>
+            <criterion-satisfaction
+                code="w13-s1"
+                criterion-type-name="LOCATION_GROUP"
+                criterion-name="TestLocationGroupCriterion"
+                start-date="2000-01-01"
+                end-date="2000-02-01"/>
+            <criterion-satisfaction
+                code="w13-s2"
+                criterion-type-name="LOCATION_GROUP"
+                criterion-name="TestLocationGroupCriterion2"
+                start-date="2000-01-15"
+                end-date="2000-02-01"/>
+        </criterion-satisfaction-list>
+    </worker>
+
+    <!-- [It assumes existence of "TestLocationGroupCriterion" and
+         "TestLocationGroupCriterion2"] Criterion satisfaction overlapping in
+         "LOCATION_GROUP :: TestLocationGroupCriterion". -->
+    <worker code="w14" first-name="w14-firstName" surname="w14-surname" nif="w14-nif">
+        <criterion-satisfaction-list>
+            <criterion-satisfaction
+                code="w14-s1"
+                criterion-type-name="LOCATION_GROUP"
+                criterion-name="TestLocationGroupCriterion"
+                start-date="2000-01-01"
+                end-date="2000-02-01"/>
+            <criterion-satisfaction
+                code="w14-s2"
+                criterion-type-name="LOCATION_GROUP"
+                criterion-name="TestLocationGroupCriterion"
+                start-date="2000-01-15"
+                end-date="2000-02-01"/>
+        </criterion-satisfaction-list>
+    </worker>
+
+    <!-- There is another worker with the same first name, surname, and nif. -->
+    <worker code="w15" first-name="w1-firstName" surname="w1-surname" nif="w1-nif"/>
+
+    <!-- Repeated criterion satisfaction code (used by another worker). -->
+    <worker code="w16" first-name="w16-firstName" surname="w16-surname" nif="w16-nif">
+        <criterion-satisfaction-list>
+            <criterion-satisfaction
+                code="w1-s1"
+                criterion-type-name="WORK_RELATIONSHIP"
+                criterion-name="hiredResourceWorkingRelationship"
+                start-date="2009-01-01"
+                end-date=""/>
+        </criterion-satisfaction-list>
+    </worker>
+
+    <!-- Missing code. -->
+    <worker first-name="w17-firstName" surname="w17-surname" nif="w17-nif"/>
+
+</resource-list>
+]]></con:request><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:credentials><con:username>wswriter</con:username><con:password>wswriter</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:request></con:method></con:resource><con:resource name="Resources - Remove entity" path="/libreplan/ws/rest/resources/w15/" id="8f344167-36e0-496b-bb94-8d75ef0c1d31"><con:settings/><con:parameters><con:parameter><con:name>_wadl</con:name><con:style>QUERY</con:style></con:parameter><con:parameter required="true"><con:name>_type</con:name><con:value>xml</con:value><con:style>QUERY</con:style><con:default>xml</con:default></con:parameter></con:parameters><con:method name="Supprimer des ressouces" id="9d384a55-a99e-4355-926a-c976a6e6b335" method="DELETE"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html;charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>application/xml</con:mediaType><con:status>200</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:order-list</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/json</con:mediaType><con:params/></con:representation><con:representation type="FAULT"><con:mediaType xsi:nil="true"/><con:status>405</con:status><con:params/><con:element>data</con:element></con:representation><con:representation type="REQUEST"><con:mediaType>application/xml</con:mediaType><con:params/></con:representation><con:representation type="RESPONSE"><con:mediaType>text/xml</con:mediaType><con:status>200</con:status><con:params/></con:representation><con:representation type="FAULT"><con:mediaType>application/xml</con:mediaType><con:status>500</con:status><con:params/><con:element xmlns:rest="http://rest.ws.libreplan.org">rest:internal-error</con:element></con:representation><con:request name="Remove entity" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:credentials><con:username>wswriter</con:username><con:password>wswriter</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/><con:parameterOrder><con:entry>_wadl</con:entry><con:entry>_type</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="e8b3b602-f663-4ff8-a228-8a57e583e446" name="LibreplanTestSuite"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:runType>SEQUENTIAL</con:runType><con:testCase id="c4b07ff6-8dca-4d1f-a42f-3a9a849371ad" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="true" name="Projets" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="httprequest" name="HTTP Request" id="828e2a53-08b2-44fc-9f87-62e0f15a1819"><con:settings/><con:config method="POST" xsi:type="con:HttpRequest" id="ef8c380f-c449-4966-a9b9-2a8a55a12d24" name="HTTP Request" postQueryString="true" mediaType="application/x-www-form-urlencoded" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8180/libreplan/common/layout/login.zul</con:endpoint><con:request/><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><con:parameter><con:name>j_username</con:name><con:value>wswriter</con:value><con:style>QUERY</con:style><con:default>wswriter</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter><con:parameter><con:name>j_password</con:name><con:value>wswriter</con:value><con:style>QUERY</con:style><con:default>wswriter</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters></con:config></con:testStep><con:testStep type="restrequest" name="Créer des projets" id="8dcbbdec-5b69-4723-aca7-1fe9520c8efc"><con:settings/><con:config service="http://localhost:8180" resourcePath="/libreplan/ws/rest/orderelements/" methodName="Import" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Créer des projets" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">true</con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<order-list xmlns="http://rest.ws.libreplan.org">
+  <order xmlns="http://rest.ws.libreplan.org"
+    code="ORDER-1" name="Order UPDATED" init-date="2019-01-01">
+    <children>
+      <order-line-group code="ORDER-1-OE-1" name="Order element 1">
+        <children>
+          <order-line code="ORDER-1-OE-1-1" name="Order element 1.1">
+            <hours-groups>
+              <hours-group code="HG-1" working-hours="1500" resource-type="WORKER" />
+            </hours-groups>
+          </order-line>
+          <order-line code="ORDER-1-OE-1-2" name="Order element 1.2">
+            <hours-groups>
+              <hours-group code="HG-2" working-hours="2500" resource-type="WORKER" />
+            </hours-groups>
+          </order-line>
+        </children>
+      </order-line-group>
+      <order-line code="ORDER-1-OE-2" name="Order element 2">
+        <hours-groups>
+          <hours-group code="HG-3" working-hours="1500" resource-type="WORKER" />
+        </hours-groups>
+      </order-line>
+    </children>
+  </order>
+   <order xmlns="http://rest.ws.libreplan.org"
+    code="ORDER-2" name="Order UPDATED 2" init-date="2019-01-01">
+  </order>
+</order-list>]]></con:request><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:assertion type="Simple Contains" id="fe801c65-9e82-4e6a-ad9b-83238f8ba519" name="Contains"><con:configuration><token>&lt;instance-constraint-violations-list xmlns="http://rest.ws.libreplan.org"/></token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Schema Compliance" id="fd53e5c9-e82b-4e4c-9a3b-a5c7f4638e77" name="Schema Compliance"><con:configuration/></con:assertion><con:credentials><con:username>wswriter</con:username><con:password>wswriter</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Récupérer un projet" id="51391801-59d6-4c6b-ac33-4a22af9e7354"><con:settings/><con:config service="http://localhost:8180" resourcePath="/libreplan/ws/rest/orderelements/{code}/" methodName="Export one" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Récupérer un projet" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:assertion type="Simple Contains" id="152132d5-72a6-4358-8eef-99d990c2077f" name="Contains"><con:configuration><token>code="${code}"</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Schema Compliance" id="e137c5a3-1a24-41aa-ade8-ab6f7cc25de6" name="Schema Compliance"><con:configuration/></con:assertion><con:credentials><con:username>wsreader</con:username><con:password>wsreader</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><entry key="code" value="ORDER-2" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>_wadl</con:entry><con:entry>_type</con:entry><con:entry>code</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Récupérer tous les projets" id="ba71733e-3a0b-4398-9fb0-b3a3e603e2f9"><con:settings/><con:config service="http://localhost:8180" resourcePath="/libreplan/ws/rest/orderelements/" methodName="Liste des projets" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Récupérer tous les projets" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:assertion type="Schema Compliance" id="d7765312-84bc-442b-a691-fd698bce54ec" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="fc23ce91-0691-4107-bbb1-4fa76820d52e" name="Contains"><con:configuration><token>order-list</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:username>wsreader</con:username><con:password>wsreader</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Supprimer des projets" id="33d75f66-d7ca-4d67-9927-a4c9b64916ce"><con:settings/><con:config service="http://localhost:8180" resourcePath="/libreplan/ws/rest/orderelements/{code}/" methodName="Supprimer des projets" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Supprimer des projets" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:assertion type="Simple Contains" id="d0ea8a2d-8adf-4558-bfdd-b9aa3d950629" name="Contains"><con:configuration><token/><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:username>wswriter</con:username><con:password>wswriter</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><entry key="code" value="ORDER-2" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>_wadl</con:entry><con:entry>_type</con:entry><con:entry>code</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/><con:breakPoints><con:testStepId>828e2a53-08b2-44fc-9f87-62e0f15a1819</con:testStepId><con:status>NONE</con:status><con:properties/></con:breakPoints></con:testCase><con:testCase id="7fc1d1f0-94f3-43f1-85a1-a784642e9b66" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Ressources" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="Créer des resources" id="398e036d-bc07-438c-9e4e-13c571af4a25"><con:settings/><con:config service="http://localhost:8180" resourcePath="/libreplan/ws/rest/resources/" methodName="Import" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Créer des resources" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/xml" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="RecordRequestRepresentations">true</con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<!--
+    See org.libreplan.web.test.ws.resources.api.ResourceServiceTest for a
+    complete list of test cases.
+ -->
+
+<resource-list xmlns="http://rest.ws.libreplan.org">
+
+    <!--  *** Machines *** -->
+
+    <!-- OK -->
+    <machine code="m1" name="m1-name" description="m1-desc"/>
+
+
+
+
+    <!-- OK or not OK depending on the existence of "TestCalendar". -->
+    <machine code="m5" name="m5-name" description="m5-desc"
+        calendar-name="TestCalendar"/>
+
+
+
+
+  
+
+
+    <!--  *** Workers *** -->
+
+
+   
+
+    
+
+
+
+
+
+   
+
+    <!-- OK or not OK depending on the existence of "TestCalendar". -->
+    <worker code="w8" first-name="w8-firstName" surname="w8-surname" nif="w8-nif"
+        calendar-name="TestCalendar" />
+
+   
+
+
+
+ 
+
+  
+
+    <!-- There is another worker with the same first name, surname, and nif. -->
+    <worker code="w15" first-name="w1-firstName" surname="w1-surname" nif="w1-nif"/>
+
+    
+
+    <!-- Missing code. -->
+    <worker first-name="w17-firstName" surname="w17-surname" nif="w17-nif"/>
+
+</resource-list>
+]]></con:request><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:assertion type="Schema Compliance" id="6ba5c592-403f-4d5a-986b-6c17151b68ef" name="Schema Compliance"><con:configuration/></con:assertion><con:credentials><con:username>wswriter</con:username><con:password>wswriter</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Récupérer les ressources" id="fbe275ee-84ff-4aeb-93f9-17968861e62c"><con:settings/><con:config service="http://localhost:8180" resourcePath="/libreplan/ws/rest/resources/" methodName="Liste des ressources" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Récupérer les ressources" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:assertion type="Schema Compliance" id="1c00ed1e-f5ef-4e33-8b8d-c2632a12e6fc" name="Schema Compliance"><con:configuration/></con:assertion><con:credentials><con:username>wsreader</con:username><con:password>wsreader</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Récupérer une ressource" id="dc22a723-ed56-419b-95f7-fb7e1bffbc6b"><con:settings/><con:config service="http://localhost:8180" resourcePath="/libreplan/ws/rest/resources/{code}/" methodName="Récupérer une ressource" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Récupérer une ressource" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:assertion type="Simple NotContains" id="942508e6-5542-42b6-adaf-013cb356bed8" name="Not Contains"><con:configuration><token>internal-error</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:username>wsreader</con:username><con:password>wsreader</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><entry key="code" value="w15" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>_wadl</con:entry><con:entry>_type</con:entry><con:entry>code</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="600a196f-d049-4500-89ff-63ea2825d4d4" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Calendriers" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="Récupérer les calendriers" id="55527a95-1c14-44af-a7a1-92b72c450efb"><con:settings/><con:config service="http://localhost:8180" resourcePath="/libreplan/ws/rest/calendars/" methodName="Récupérer les calendriers" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Récupérer les calendriers" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:assertion type="Schema Compliance" id="3e16bd08-a3f1-431c-92d3-4aba97653967" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="7a977527-f29c-46ba-903f-5a0ecfe1bf71" name="Contains"><con:configuration><token>base-calendar-list</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="92da104c-8d3c-4931-8512-79078de3e737" name="Contains 2"><con:configuration><token>base-calendar</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="6f3cf21c-22ce-4fa0-bb34-c9a88100e54f" name="Contains 3"><con:configuration><token>calendar-data</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:username>wsreader</con:username><con:password>wsreader</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/><con:parameterOrder><con:entry>_wadl</con:entry><con:entry>_type</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="Récupérer un calendrier" id="8a587557-610d-4f70-b9bf-b60adb5c47ea"><con:settings/><con:config service="http://localhost:8180" resourcePath="/libreplan/ws/rest/calendars/{code}/" methodName="Récupérer un calendrier" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Récupérer un calendrier" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:assertion type="Simple Contains" id="103988ba-e3f9-43e2-93b5-1c31081802e5" name="Contains"><con:configuration><token>base-calendar</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Schema Compliance" id="4f6f68b0-640c-4ab6-b5e9-c9ec70ad4f2d" name="Schema Compliance"><con:configuration/></con:assertion><con:assertion type="Simple Contains" id="bfe1efb8-308e-4b31-8c17-af4d812dd20b" name="Contains 2"><con:configuration><token>calendar-data-list</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple Contains" id="b7f27abc-3f23-432d-9156-81132553d062" name="Contains 3"><con:configuration><token>calendar-data</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:username>wsreader</con:username><con:password>wsreader</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters><entry key="code" value="CALENDAR0001" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>_wadl</con:entry><con:entry>_type</con:entry><con:entry>code</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:testCase id="8b661b34-2b46-4bed-b056-10cac8debcc3" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestAuthtenticate" searchProperties="true" timeout="0"><con:settings/><con:savedRecentRuns>1</con:savedRecentRuns><con:testStep type="restrequest" name="RecupererLesCalendriersTestAAuthenticateofExportall" id="4cf535db-47c0-402c-81ce-130b5f7422d1"><con:settings/><con:config service="http://localhost:8180" resourcePath="/libreplan/ws/rest/calendars/" methodName="Récupérer les calendriers" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="RecupererLesCalendriersTestAAuthenticateofExportall" id="97e512e9-0542-4a23-9acc-3635cce14cba" mediaType="application/json" postQueryString="false"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://localhost:8180</con:endpoint><con:request/><con:originalUri>http://localhost/libreplan/common/layout/login.zul;jsessionid=2B15FBB0282BC26D5CF53E75F9A5CE58</con:originalUri><con:assertion type="XPath Match" id="c6b3e473-692d-4217-95f3-83d23071c217" name="XPath Match"><con:configuration><path>declare namespace ns1='http://rest.ws.libreplan.org';
+//ns1:base-calendar-list[1]/ns1:base-calendar[1]</path><content><![CDATA[<base-calendar name="Default" code="CALENDAR0001" xmlns="http://rest.ws.libreplan.org">
+  <calendar-exception-list/>
+  <calendar-data-list>
+    <calendar-data code="a9ac00f5-fc5b-4595-b4d1-2cb122063b7a">
+      <hours-per-day-list>
+        <hours-per-day hours="8" day="MONDAY"/>
+        <hours-per-day hours="8" day="TUESDAY"/>
+        <hours-per-day hours="8" day="WEDNESDAY"/>
+        <hours-per-day hours="8" day="THURSDAY"/>
+        <hours-per-day hours="8" day="FRIDAY"/>
+        <hours-per-day hours="0" day="SATURDAY"/>
+        <hours-per-day hours="0" day="SUNDAY"/>
+      </hours-per-day-list>
+    </calendar-data>
+  </calendar-data-list>
+</base-calendar>]]></content><allowWildcards>false</allowWildcards><ignoreNamspaceDifferences>false</ignoreNamspaceDifferences><ignoreComments>false</ignoreComments></con:configuration></con:assertion><con:credentials><con:username>wsreader</con:username><con:password>wsreader</con:password><con:selectedAuthProfile>Basic</con:selectedAuthProfile><con:preemptive>true</con:preemptive><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>Preemptive</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:parameters/><con:parameterOrder><con:entry>_wadl</con:entry><con:entry>_type</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:properties/><con:reportParameters/></con:testCase><con:properties/><con:reportParameters/></con:testSuite><con:savedRecentRuns>1</con:savedRecentRuns><con:requirements/><con:properties/><con:wssContainer/><con:databaseConnectionContainer/><con:jmsConnectionContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:reporting><con:reportTemplates/><con:xmlTemplates/><con:xmlTemplates/><con:parameters/><con:parameters/></con:reporting><con:reporting/><con:eventHandlers type="RequestFilter.filterRequest" name="RequestFilter.filterRequest"><con:script>// Sample event script to add custom HTTP header to all outgoing REST, SOAP and HTTP(S) calls
+// This code is often used for adding custom authentication to SoapUI Pro tests
+
+// If hardcoding the token, uncomment and change line 5
+// def token = '4567'
+
+// If your token is parameterized in Project level custom property, uncomment line 8
+// def token = request.parent.testCase.testSuite.project.getProperty('auth_token').getValue()
+
+// To modify all outgoing calls, remove comments from lines 11 to 16
+// def headers = request.requestHeaders
+// if (headers.containsKey('auth_token2') == false) {
+//   headers.put('auth_token2', token)
+//   request.requestHeaders = headers
+// }</con:script></con:eventHandlers><con:eventHandlers type="TestRunListener.afterStep" name="TestRunListener.afterStep"><con:script>// Save all test step results into files
+// Change the directory path in line 5 to a location where you want to store details
+// then uncomment lines 5 to 10
+
+// filePath = 'C:\\tempOutputDirectory\\'
+// fos = new FileOutputStream(filePath + testStepResult.testStep.label + '.txt', true)
+// pw = new PrintWriter(fos)
+// testStepResult.writeTo(pw)
+// pw.close()
+// fos.close()</con:script></con:eventHandlers><con:authRepository><con:basicAuthEntry><con:name>wsreader</con:name><con:type>Basic</con:type><con:username>wsreader</con:username><con:password>wsreader</con:password><con:preemptive>true</con:preemptive></con:basicAuthEntry></con:authRepository><con:tags/></con:soapui-project>

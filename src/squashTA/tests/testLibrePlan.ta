@@ -1,2 +1,2 @@
 TEST :
-# EXECUTE_SOAPUI LibreplanAPI-readyapi-project.xml WITH TEST_SUITE LibreplanTestSuite
+# EXECUTE_SOAPUI LibreplanAPI-readyapi-project-bis.xml WITH TEST_SUITE LibreplanTestSuite
