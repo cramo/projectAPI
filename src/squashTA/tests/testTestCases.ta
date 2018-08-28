@@ -1,2 +1,3 @@
 TEST :
-# EXECUTE_SOAPUI ndfdXMLserver-readyapi-project.xml WITH TEST_SUITE LatLonListZipCode AND TEST_CASE LatLonListZipCodeTestSuite
+# EXECUTE_SOAPUI LogicalDoc.xml WITH TEST_SUITE TestSuite AND TEST_CASE CreerDocument
+# EXECUTE_SOAPUI LogicalDoc.xml WITH TEST_SUITE TestSuite AND TEST_CASE MajTitre
